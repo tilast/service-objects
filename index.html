@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Awesome Presentation</title>
+    <title>Service Objects as Wheelhorses in Rails Apps</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <style type="text/css">
       @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
@@ -24,7 +24,7 @@ class: center, middle
 # Service Objects as
 # Wheelhorses in Rails Apps
 
-<img src="/src/images/1.jpg" alt="Wheelhorse" style="width:500px;">
+<img src="src/images/1.jpg" alt="Wheelhorse" style="width:500px;">
 
     Ihor Kroosh
 
@@ -36,7 +36,7 @@ Typical Rails App's problems are:
 
 1. Fat Models
 
-<center><img src="/src/images/2.jpg" alt="Fat Models" style="width:500px;"><center>
+<center><img src="src/images/2.jpg" alt="Fat Models" style="width:500px;"><center>
 
 ---
 
@@ -46,7 +46,7 @@ Typical Rails App's problems are:
 
 2. Fat Controllers
 
-<center><img src="/src/images/3.jpg" alt="Fat Controllers" style="width:500px;"></center>
+<center><img src="src/images/3.jpg" alt="Fat Controllers" style="width:500px;"></center>
 
 ---
 
@@ -56,7 +56,7 @@ Typical Rails App's problems are:
 
 3. Low test coverage :'(
 
-<center><img src="/src/images/4.png" alt="Low Test Coverage" style="width:500px;"></center>
+<center><img src="src/images/4.png" alt="Low Test Coverage" style="width:500px;"></center>
 
 ---
 
@@ -64,14 +64,14 @@ Typical Rails App's problems are:
 
   - Stop write a code
   
-<center><img src="/src/images/5.jpg" alt="Stop Writing a Code" style="width:500px;"></center>
+<center><img src="src/images/5.jpg" alt="Stop Writing a Code" style="width:500px;"></center>
 
 ---
 
 # How to handle this situations
 
   - Continue write code in this way and weep bitterly
-  <center><img src="/src/images/6.jpg" alt="Continue write code in this way and weep bitterly" style="width:500px;"></center>
+  <center><img src="src/images/6.jpg" alt="Continue write code in this way and weep bitterly" style="width:500px;"></center>
   
 ---
 
@@ -99,17 +99,17 @@ It can consist of different methods, but it always seems to be **atomic** for th
 
 ---
 
-# Why does it good?
+# Why is it good?
 
   **it REUSABLE**
 
   Imagine you don't have a creator - service object, but you need to create objects in this way in several places in the code. You can do it as a callback in model, but it cause high connectivity of this components and the model will be much more bigger and ambiguous.
 
-  <center><img src="/src/images/11.jpg" alt="Continue write code in this way and weep bitterly" style="width:500px;"></center>
+  <center><img src="src/images/11.jpg" alt="Continue write code in this way and weep bitterly" style="width:500px;"></center>
   
 ---
 
-# Why does it good?
+# Why is it good?
 
   **it REUSABLE**
 
@@ -139,15 +139,15 @@ end
 
 ---
 
-# Why does it good?
+# Why is it good?
 
   **it ENCAPSULATES ALL LOGIC**
 
-  <center><img src="/src/images/9.png" alt="it INCAPSULATES ALL LOGIC" style="width:500px;"></center>
+  <center><img src="src/images/9.png" alt="it INCAPSULATES ALL LOGIC" style="width:500px;"></center>
 
 ---
 
-# Why does it good?
+# Why is it good?
   
   **it ENCAPSULATES ALL LOGIC**
 
@@ -169,7 +169,7 @@ end
 
 ---
 
-# Why does it good?
+# Why is it good?
   
   **it ENCAPSULATES ALL LOGIC**
 
@@ -191,7 +191,7 @@ end
 
 ---
 
-# Why does it good?
+# Why is it good?
   
   **it ENCAPSULATES ALL LOGIC**
 
@@ -208,7 +208,7 @@ end
 
 ---
 
-# Why does it good?
+# Why is it good?
   
   **it ENCAPSULATES ALL LOGIC**
 
@@ -228,17 +228,17 @@ end
 
 ---
 
-# Why does it good?
+# Why is it good?
   
   **it ENCAPSULATES ALL LOGIC**
 
   Also it allows us not to use callbacks in models in order to avoid unexpected behavoiur.
 
-  <center><img src="/src/images/12.jpg" alt="Continue write code in this way and weep bitterly" style="width:500px;"></center>
+  <center><img src="src/images/12.jpg" alt="Continue write code in this way and weep bitterly" style="width:500px;"></center>
 
 ---
 
-# Why does it good?
+# Why is it good?
 
   **it EASY TESTABLE**
 
@@ -264,7 +264,7 @@ end
 
 ---
 
-# Why does it good?
+# Why is it good?
 
   **it EASY TESTABLE**
 
@@ -320,8 +320,12 @@ Using implicit creation with module `Service`
     include Service
 
     attr_reader :param1, :param2
+    
+    def initialize(param1, param2)
+      ...
+    end
 
-    def call(param1, param2)
+    def call
       ...
     end
   end
@@ -331,7 +335,7 @@ Using implicit creation with module `Service`
 
 # Errors handling
 
-  <center><img src="/src/images/13.png" alt="Continue write code in this way and weep bitterly" style="width:500px;"></center>
+  <center><img src="src/images/13.png" alt="Continue write code in this way and weep bitterly" style="width:500px;"></center>
 
 ---
 
@@ -465,7 +469,7 @@ Using implicit creation with module `Service`
 
   # Thanx :)
 
-  <center><img src="/src/images/14.jpg" alt="Continue write code in this way and weep bitterly" style="width:350px;"></center>
+  <center><img src="src/images/14.jpg" alt="Continue write code in this way and weep bitterly" style="width:350px;"></center>
 
     </textarea>
     <script src="out/remark.js" type="text/javascript">
