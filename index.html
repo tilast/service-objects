@@ -378,7 +378,7 @@ Using implicit creation with module `Service`
 # Errors handling
 
   But for simple service objects it's good to use next practice.
-  Let's look at PasswordUpdater example
+  Let's look at `PasswordUpdater` example
 
   ```ruby
     class PasswordUpdater
@@ -407,7 +407,7 @@ Using implicit creation with module `Service`
 
 # Errors handling
 
-  We split our perform method on valuable parts and if one of them returns false we stop executing. Service .pefrom methods returns either true or false, and all errors we can find in .errors attr_reader.
+  We split our perform method on valuable parts and if one of them returns `false` we stop executing. Service `.pefrom` methods returns either `true` or `false`, and all errors we can find in `.errors` attr_reader.
 
   ```ruby
     service = PasswordUpdater.new(1, params)
